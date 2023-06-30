@@ -9,6 +9,8 @@ const colors = {
   disabled: "",
   white: "hsla(0, 0%, 100%, 1)",
   black: "hsla(0, 0%, 0%, 1)",
+  almostDark: "hsla(210, 70%, 25%, .95)",
+  almostWhite: "",
   text: {
     main: "hsla(0, 0%, 0%, 1)",
     light: "hsla(210, 70%, 92%, 1)",
@@ -41,6 +43,7 @@ export const theme = {
   color: {
     bg: {
       main: colors.main,
+      dark: colors.almostDark,
     },
     text: colors.text,
   },
