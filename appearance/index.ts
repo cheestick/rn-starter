@@ -1,16 +1,18 @@
 const colors = {
-  main: "",
-  primary: "",
+  main: "hsla(210, 80%, 45%, 0.9)",
+  primary: "hsla(210, 70%, 85%, 1)",
   secondary: "",
   accent: "",
   active: "",
   inactive: "",
   idle: "",
   disabled: "",
+  white: "hsla(0, 0%, 100%, 1)",
+  black: "hsla(0, 0%, 0%, 1)",
   text: {
     main: "hsla(0, 0%, 0%, 1)",
     light: "hsla(210, 70%, 92%, 1)",
-    dark: "hsla(210, 70%, 5%, 1)",
+    dark: "hsla(210, 70%, 35%, 1)",
   },
 };
 
@@ -34,14 +36,18 @@ const statusBar = {
 
 export const theme = {
   bg: {
-    primary: "hsla(210, 70%, 85%, 1)",
+    primary: colors.primary,
   },
   color: {
     bg: {
-      main: "hsla(210, 80%, 45%, 0.9)",
+      main: colors.main,
     },
     text: colors.text,
   },
-  text,
   statusBar,
+  text,
+  utils: {
+    radius: 10,
+    width: 2,
+  },
 } as const;
