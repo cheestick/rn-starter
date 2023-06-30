@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { TextInput, Button, Text, View, Alert } from "react-native";
+import { TextInput, Button, Text, View, Alert, Keyboard } from "react-native";
 import { sx } from "./AddTodo.styles";
 import { theme } from "../../appearance";
 
@@ -29,6 +29,7 @@ export default function AddTodo({ onSubmit }: Props) {
 
     onSubmit(text);
     clearText();
+    Keyboard.dismiss();
   };
 
   return (
