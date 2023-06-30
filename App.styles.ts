@@ -7,10 +7,13 @@ export const sx = StyleSheet.create({
     backgroundColor: theme.bg.primary,
   },
   content: {
-    padding: 40,
+    flex: 1,
+    paddingHorizontal: 30,
+    paddingBottom: 25,
+    paddingTop: 40,
   },
   list: {
-    // flex: 1,
+    flex: 1,
     marginTop: 20,
   },
 });
