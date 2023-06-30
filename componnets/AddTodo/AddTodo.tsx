@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { TextInput, Button, Text, View } from "react-native";
+import { TextInput, Button, Text, View, Alert } from "react-native";
 import { sx } from "./AddTodo.styles";
 import { theme } from "../../appearance";
 
@@ -17,6 +17,16 @@ export default function AddTodo({ onSubmit }: Props) {
   const clearText = () => setText("");
 
   const onAddTodo = () => {
+    if (text.trim().length < 4) {
+      Alert.alert("Oops!", "Todos must be over 3 chars long.", [
+        {
+          text: "Got it",
+          onPress: () => {},
+        },
+      ]);
+      return;
+    }
+
     onSubmit(text);
     clearText();
   };
