@@ -10,6 +10,7 @@ export const sx = StyleSheet.create({
     padding: 40,
   },
   list: {
+    // flex: 1,
     marginTop: 20,
   },
 });
