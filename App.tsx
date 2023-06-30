@@ -1,5 +1,12 @@
 import { useState } from "react";
-import { Text, SafeAreaView, View, FlatList, StatusBar } from "react-native";
+import {
+  Text,
+  SafeAreaView,
+  View,
+  FlatList,
+  TouchableWithoutFeedback,
+  Keyboard,
+} from "react-native";
 import { sx } from "./App.styles";
 import { todosMock } from "./mock/todos";
 import Header from "./componnets/Header/Header";
@@ -24,20 +31,22 @@ export default function App() {
   };
 
   return (
-    <View style={sx.container}>
-      <Header />
-      <View style={sx.content}>
-        <AddTodo onSubmit={submitHandler} />
-        <View style={sx.list}>
-          <FlatList
-            keyExtractor={(todo) => todo.id}
-            data={todos}
-            renderItem={({ item }) => (
-              <TodoItem todo={item} onRemove={pressHandler} />
-            )}
-          />
+    <TouchableWithoutFeedback onPress={(f) => Keyboard.dismiss()}>
+      <View style={sx.container}>
+        <Header />
+        <View style={sx.content}>
+          <AddTodo onSubmit={submitHandler} />
+          <View style={sx.list}>
+            <FlatList
+              keyExtractor={(todo) => todo.id}
+              data={todos}
+              renderItem={({ item }) => (
+                <TodoItem todo={item} onRemove={pressHandler} />
+              )}
+            />
+          </View>
         </View>
       </View>
-    </View>
+    </TouchableWithoutFeedback>
   );
 }
