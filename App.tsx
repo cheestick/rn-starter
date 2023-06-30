@@ -4,6 +4,7 @@ import { sx } from "./App.styles";
 import { todosMock } from "./mock/todos";
 import Header from "./componnets/Header/Header";
 import TodoItem from "./componnets/TodoItem/TodoItem";
+import AddTodo from "./componnets/AddTodo/AddTodo";
 
 export default function App() {
   const [todos, setTodos] = useState(todosMock);
@@ -12,11 +13,21 @@ export default function App() {
     setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== key));
   };
 
+  const submitHandler = (text: string) => {
+    setTodos((prevTodos) => [
+      ...prevTodos,
+      {
+        text,
+        id: Math.random().toString(),
+      },
+    ]);
+  };
+
   return (
     <View style={sx.container}>
       <Header />
       <View style={sx.content}>
-        {/* to form */}
+        <AddTodo onSubmit={submitHandler} />
         <View style={sx.list}>
           <FlatList
             keyExtractor={(todo) => todo.id}
