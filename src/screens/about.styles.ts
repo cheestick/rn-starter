@@ -3,14 +3,9 @@ import { theme } from "../theme";
 
 export const sx = StyleSheet.create({
   container: {
-    flex: 1,
-    paddingVertical: 32,
-    paddingHorizontal: 24,
-    backgroundColor: theme.colors.background,
+    backgroundColor: theme.colors.screens.about,
   },
   text: {
-    marginVertical: 15,
     textAlign: "center",
-    fontSize: theme.text.size.heading,
   },
 });
