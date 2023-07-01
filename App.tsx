@@ -1,7 +1,4 @@
-import { useState } from "react";
-import * as Font from "expo-font";
 import { useFonts } from "expo-font";
-import { sx } from "./App.styles";
 import Home from "./src/screens/home";
 import { ActivityIndicator } from "react-native";
 
