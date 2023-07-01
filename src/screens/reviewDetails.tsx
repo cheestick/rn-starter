@@ -5,7 +5,7 @@ import { sx } from "./reviewDetails.styles";
 const ReviewDetails = () => {
   return (
     <View style={sx.container}>
-      <Text>ReviewDetails</Text>
+      <Text style={sx.text}>ReviewDetails Screen</Text>
     </View>
   );
 };

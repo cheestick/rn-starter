@@ -5,7 +5,7 @@ import { sx } from "./home.styles";
 const Home = () => {
   return (
     <View style={sx.container}>
-      <Text>Home</Text>
+      <Text style={sx.text}>Home Screen</Text>
     </View>
   );
 };

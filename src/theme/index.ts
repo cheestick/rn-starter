@@ -5,6 +5,7 @@ const colors = {
   secondary: {},
   accent: {},
   disabled: {},
+  background: "hsla(0, 60%, 70%, 1)",
 };
 
 const text = {
